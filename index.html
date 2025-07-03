@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeFireXperTrade</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/96345c4702.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <audio id="background-music" src="free_fire.mp3" loop preload="auto"></audio>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="image/free fire.jpg" alt="Free Fire Logo">
+            </div>
+            <!-- Menu Icon (Hamburger) -->
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <!-- Navigation Menu (Hidden by default) -->
+            <ul id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#tactics" class="nav-link">Tactics</a></li>
+                <li><a href="#esports" class="nav-link">Esports</a></li>
+                <li><a href="#trading" class="nav-link">Trading</a></li>
+                <li><a href="#contact" class="nav-link">Contact Us</a></li>
+                <li class="fas" onclick="toggleMenu()">&#10005;</li>
+            </ul>
+        </nav>        
+    </header>
+    <script>
+        // Function to toggle the navigation menu
+        function toggleMenu() {
+            const navMenu = document.getElementById("nav-menu");
+            navMenu.classList.toggle("active");
+        }
+    </script>
+    
+    <section id="home">
+        <h1>Welcome to <br><span class="typing-effect">FreeFireXperTrade</span></h1>
+        <p>Your ultimate guide to mastering Free Fire and trading accounts safely.</p>
+        <!-- <img src="image/Hayato.png" alt="Hayato" class="home-image left-image">
+        <img src="image/Alok.png" alt="Alok" class="home-image right-image"> -->
+    </section>    
+
+    <section id="tactics">
+        <h2>Free Fire Tactics</h2>
+        <p>Master advanced strategies for different gameplay modes and dominate the battlefield.</p>
+        
+        <div class="tactic-container">
+            <div class="tactic-card">
+                <img src="image/BR.webp" alt="Battle Royale">
+                <div class="tactic-content">
+                    <h3>Battle Royale</h3>
+                    <p>Survive and thrive in intense Battle Royale matches. Learn the best landing spots, loot strategies, and zone control tactics.</p>
+                    <a href="javascript:void(0);" class="btn" onclick="showTactics('BR')">Learn More</a>
+                </div>
+            </div>
+            <div class="tactic-card">
+                <img src="image/cs-tactics.jpg" alt="Clash Squad">
+                <div class="tactic-content">
+                    <h3>Clash Squad</h3>
+                    <p>Enhance teamwork and decision-making skills in Clash Squad mode. Master weapon choices, team coordination, and round-winning tips.</p>
+                    <a href="javascript:void(0);" class="btn" onclick="showTactics('CS')">Learn More</a>
+                </div>
+            </div>
+            <div class="tactic-card">
+                <video id="customRoomVideo" muted loop>
+                    <source src="video/custom-room.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="tactic-content">
+                    <h3>Custom Room</h3>
+                    <p>Create and dominate Custom Rooms with unique gameplay strategies. Learn room settings and tips for hosting fun matches.</p>
+                    <a href="javascript:void(0);" class="btn" onclick="showTactics('CustomRoom')">Learn More</a>
+                </div>
+            </div>                    
+        </div>
+        
+        <!-- Dialog Box for Tactics -->
+        <div id="tacticsDialog" class="dialog">
+            <div class="dialog-content">
+                <span class="close-btn" onclick="closeTactics()">×</span>
+                <h1>Tactics Breakdown</h1>
+                <div id="tacticsContent"></div>
+            </div>
+        </div>   
+    </section>
+    
+    <section id="esports">
+        <h2>The Future of Free Fire Esports Starts Here!</h2>
+        <p class="esports-intro">
+            Free Fire Esports is more than just a game – it’s a <b>career, passion, and a global platform</b> for skilled players!  
+            Compete in <b>official tournaments</b>, earn <b>big rewards</b>, and <b>make a name for yourself</b> in the Esports industry!  
+        </p>
+    
+        <div class="esports-container">
+            <!-- Esports Tournaments -->
+            <div class="esports-card">
+                <img src="image/esports.png" alt="Free Fire Tournament">
+                <div class="esports-content">
+                    <h3>🏆 Compete in Global Tournaments</h3>
+                    <p>Join international Free Fire tournaments and battle against the <b>best players in the world</b>.  
+                       Win <b>cash prizes, sponsorships, and recognition</b> in the gaming community.</p>
+                    <a href="https://escharts.com/tournaments/free-fire" class="btn" target="_blank">View Upcoming Tournaments</a>
+                </div>
+            </div>
+    
+            <!-- Esports Career Opportunities -->
+            <div class="esports-card">
+                <img src="image/esports-career2.jpg" alt="Esports Career">
+                <div class="esports-content">
+                    <h3>💼 Start Your Esports Career</h3>
+                    <p>Becoming a professional Free Fire player isn’t the only career path.  
+                       Explore careers as a <b>Streamer, Coach, Analyst, or Tournament Organizer</b>.</p>
+                    <a href="https://esportsworldcup.com/en/competitions/free-fire" class="btn" target="_blank">Learn From Pros</a>
+                </div>
+            </div>
+    
+            <!-- Esports Streaming -->
+            <div class="esports-card">
+                <img src="image/streaming.jpg" alt="Free Fire Streaming">
+                <div class="esports-content">
+                    <h3>🎥 Build a Streaming Career</h3>
+                    <p>Monetize your gaming skills by streaming on platforms like <b>YouTube, Twitch, and Booyah!</b>  
+                       Create engaging content and grow your <b>fan base</b>.</p>
+                    <a href="https://loco.com/categories/free-fire" class="btn" target="_blank">Start Streaming</a>
+                </div>
+            </div>
+    
+            <!-- Road to Success -->
+            <div class="esports-card">
+                <img src="image/pro-player.jpg" alt="Road to Pro Player">
+                <div class="esports-content">
+                    <h3>🔥 Road to Becoming a Pro Player</h3>
+                    <p>Follow the journey of <b>top-ranked Free Fire players</b> and learn their <b>training, strategies, and discipline</b> 
+                       to become a <b>successful Esports athlete</b>.</p>
+                    <a href="https://www.cashify.in/how-to-become-a-professional-garena-free-fire-player" class="btn" target="_blank">Explore Pro Player Journey</a>
+                </div>
+            </div>
+        </div>
+    </section>    
+    
+    <section id="trading">
+        <h2>Free Fire Trading</h2>
+        <p>Buy and Sell Free Fire IDs safely with verified users.</p>
+    
+        <!-- Toggle Buttons -->
+        <div class="trade-toggle">
+            <button id="buyBtn" class="active" onclick="showTradingSection('buy')">Buy a Free Fire ID</button>
+            <button id="sellBtn" onclick="showTradingSection('sell')">Sell a Free Fire ID</button>
+        </div>
+    
+        <div class="trading-container">
+            <!-- Buying Section (Default Visible) -->
+            <div id="buy-section" class="trade-card">
+                <h3>Buy a Free Fire ID</h3>
+                <p>Browse verified accounts available for sale.</p>
+    
+                <form id="buy-form">
+                    <label for="buy-username">Your Name:</label>
+                    <input type="text" id="buy-username" name="buy-username" required>
+    
+                    <label for="buy-item">Preferred Account Type:</label>
+                    <select id="buy-item" name="buy-item">
+                        <option value="Rare skins">Rare Gun Skins Account</option>
+                        <option value="High-Level">High-Level Account</option>
+                        <option value="Rare collections">Rare Collections Account</option>
+                    </select>
+    
+                    <label for="buy-budget">Your Budget (₹):</label>
+                    <input type="number" id="buy-budget" name="buy-budget" required>
+    
+                    <label for="buy-phone">Contact Number:</label>
+                    <input type="number" id="buy-phone" name="buy-phone" required>
+    
+                    <button class="button" type="submit">Submit Request</button>
+                </form>
+            </div>
+    
+            <!-- Selling Section (Hidden by Default) -->
+            <div id="sell-section" class="trade-card hidden">
+                <h3>Sell Your Free Fire ID</h3>
+                <p>List your Free Fire account for sale.</p>
+    
+                <form id="sell-form">
+                    <label for="sell-username">Your Name:</label>
+                    <input type="text" id="sell-username" name="sell-username" required>
+    
+                    <label for="sell-id">Account Level:</label>
+                    <input type="text" id="sell-id" name="sell-id" required>
+    
+                    <label for="sell-price">Selling Price (₹):</label>
+                    <input type="number" id="sell-price" name="sell-price" required>
+    
+                    <label for="sell-phone">Contact Number:</label>
+                    <input type="number" id="sell-phone" name="sell-phone" required>
+    
+                    <button type="submit">Submit Listing</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+  function submitForm(formId, sheetName) {
+    const form = document.getElementById(formId);
+    const formData = new FormData(form);
+    formData.append("sheet", sheetName); // 🔥 Make sure this is included
+
+    fetch("https://script.google.com/macros/s/AKfycbyLD47L40TQ_f23UF4icV5XyObUJMXsFCkgXGm8bIP_rVF7YlarQ4MN8zx-mn_qqFP7/exec", {
+      method: "POST",
+      body: formData,
+    })
+    .then(response => response.text())
+    .then(data => {
+      alert("✅ Your request has been submitted successfully!");
+      form.reset();
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("⚠️ There was an error submitting your request.");
+    });
+  }
+
+  // Event Listeners
+  document.getElementById("buy-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    submitForm("buy-form", "Buy Requests");
+  });
+
+  document.getElementById("sell-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    submitForm("sell-form", "Sell Listings");
+  });
+</script>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+    
+        <!-- Large space below heading -->
+        <p>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=bilalqizar@gmail.com" 
+               target="_blank" data-tooltip="Send a mail directly to us">
+                <i class="fa-solid fa-paper-plane"></i> bilalqizar@gmail.com
+            </a>
+        </p>
+    
+        <p>
+            <a href="tel:+918925426680" data-tooltip="Make a call to us to know more details">
+                <i class="fa-solid fa-phone"></i> +91 89254 26680
+            </a>
+        </p>
+    
+        <!-- Large space before the legendary line -->
+        <div class="legendary-line">
+            <h3>"Where Legends are Made, and Heroes Rise!"</h3>
+        </div>
+            
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+            <a href="https://x.com/QizarBilal" class="twitter" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/super_star9611/" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/mohammed-qizar-bilal/" class="linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/QizarBilal" class="github" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </section>    
+
+    <footer>
+        <!-- Left side: Garena logo -->
+        <div class="garena-logo">
+            <img src="image/Garena.png" alt="Garena Logo">
+            <span>Garena</span>
+        </div>
+    
+        <!-- Right side: Copyright text -->
+        <p class="copyright">© 2025 Free Fire Platform designed by Mohammed Qizar Bilal. All rights reserved.</p>
+    </footer>             
+
+    <button class="music-toggle" onclick="toggleMusic()">
+        <i class="fa"></i> <!-- Replace with your preferred icon -->
+    </button>
+
+    <script>
+        let isPlaying = false;
+        function toggleMusic() {
+            const audio = document.getElementById('background-music');
+            const buttonIcon = document.querySelector('.music-toggle i');
+
+            if (isPlaying) {
+                audio.pause();
+                buttonIcon.classList.remove('fa-pause');
+                buttonIcon.classList.add('fa-play');
+            } else {
+                audio.play();
+                buttonIcon.classList.remove('fa-play');
+                buttonIcon.classList.add('fa-pause');
+            }
+
+            isPlaying = !isPlaying;
+        }
+    </script>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+    
+        function setActiveLink() {
+            let fromTop = window.scrollY + 50;
+    
+            navLinks.forEach(link => {
+                const section = document.querySelector(link.getAttribute('href'));
+    
+                if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+    
+        window.addEventListener('scroll', setActiveLink);
+        setActiveLink();
+    </script>
+
+    <script>
+        function showTactics(mode) {
+            const tacticsDialog = document.getElementById("tacticsDialog");
+            const tacticsContent = document.getElementById("tacticsContent");
+        
+            let tacticsHTML = "";
+        
+            if (mode === "BR") {
+                tacticsHTML = `
+                    <h3>Battle Royale Tactics</h3>
+                    <p><img class="role-icon" src="icons/rusher.webp"> <strong>Rusher:</strong> Rush towards key loot spots, secure kills early, and control the center of the map.</p>
+                    <p><img class="role-icon" src="icons/sniper.webp"> <strong>Sniper:</strong> Find high ground and maintain distance, picking off enemies from afar.</p>
+                    <p><img class="role-icon" src="icons/assaulter.webp"> <strong>Assaulter:</strong> Charge into combat zones, create chaos, and help your team secure objectives.</p>
+                `;
+            } else if (mode === "CS") {
+                tacticsHTML = `
+                    <h3>Clash Squad Tactics</h3>
+                    <p><img class="role-icon" src="icons/rusher.webp"> <strong>Rusher:</strong> Charge the objective and rush through chokepoints to surprise the enemy.</p>
+                    <p><img class="role-icon" src="icons/sniper.webp"> <strong>Sniper:</strong> Hold back, find cover, and eliminate enemies from a distance.</p>
+                    <p><img class="role-icon" src="icons/assaulter.webp"> <strong>Assaulter:</strong> Push the team forward, engage aggressively, and clear the way for your team.</p>
+                `;
+            } else if (mode === "CustomRoom") {
+                tacticsHTML = `
+                    <h3>Custom Room Tactics</h3>
+                    <p><img class="role-icon" src="icons/rusher.webp"> <strong>Rusher:</strong> Play aggressive, focus on getting early kills in unpredictable custom settings.</p>
+                    <p><img class="role-icon" src="icons/sniper.webp"> <strong>Sniper:</strong> Hide in a strategic spot and control the custom room with precise shots.</p>
+                    <p><img class="role-icon" src="icons/assaulter.webp"> <strong>Assaulter:</strong> Lead your team by creating diversion and pushing towards objectives in custom rooms.</p>
+                `;
+            }
+        
+            tacticsContent.innerHTML = tacticsHTML;
+            tacticsDialog.style.display = "flex"; // Show the dialog
+        }
+        
+        // Function to Close Dialog
+        function closeTactics() {
+            document.getElementById("tacticsDialog").style.display = "none";
+        }        
+        
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const video = document.getElementById("customRoomVideo");
+    
+            video.addEventListener("mouseenter", function() {
+                video.play();
+            });
+    
+            video.addEventListener("mouseleave", function() {
+                video.pause();
+                video.currentTime = 0; // Reset video when mouse leaves
+            });
+        });
+    </script>   
+    <script>
+        function showTradingSection(section) {
+            const buySection = document.getElementById("buy-section");
+            const sellSection = document.getElementById("sell-section");
+            const buyBtn = document.getElementById("buyBtn");
+            const sellBtn = document.getElementById("sellBtn");
+        
+            if (section === "buy") {
+                buySection.style.display = "block";
+                sellSection.style.display = "none";
+                buyBtn.classList.add("active");
+                sellBtn.classList.remove("active");
+            } else {
+                buySection.style.display = "none";
+                sellSection.style.display = "block";
+                sellBtn.classList.add("active");
+                buyBtn.classList.remove("active");
+            }
+        }
+        
+        // Ensure the buy section is visible on page load
+        document.addEventListener("DOMContentLoaded", function () {
+            showTradingSection("buy");
+        });        
+    </script>      
+    <script>
+        // Function to toggle the menu visibility on small screens
+    function toggleMenu() {
+        const navMenu = document.getElementById("nav-menu");
+        navMenu.classList.toggle("active");  // Add or remove the 'active' class to show/hide the menu
+    }         
+    </script>
+</body>
+</html>
